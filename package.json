@@ -16,7 +16,8 @@
   },
   "lint-staged": {
     "*.html": "npx vlint",
-    "*.ts": "eslint --fix"
+    "*.ts": "eslint --fix",
+    "*.scss": "npx stylelint"
   },
   "author": "",
   "license": "ISC",
