@@ -1,0 +1,8 @@
+node_modules
+.vscode
+dist.txt
+*.db
+
+# TODO:共同開発の際の競合を防ぐ為に除外。納品時には必ず除外ファイルから外すこと。
+docs/shared/js/index.js
+docs/shared/css/style.css
