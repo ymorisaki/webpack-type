@@ -15,6 +15,7 @@
     }
   },
   "lint-staged": {
+    "*.html": "npx vlint",
     "*.ts": "eslint --fix"
   },
   "author": "",
