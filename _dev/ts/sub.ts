@@ -1,3 +1,3 @@
 export const sub = () => {
-  console.log('s')
-}
+    console.log('fuga');
+};

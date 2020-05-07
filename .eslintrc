@@ -1,0 +1,6 @@
+{
+  "extends": "@mitsue",
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}

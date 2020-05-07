@@ -1,3 +1,3 @@
-import {sub} from './sub'
+import {sub} from './sub';
 
 sub();
