@@ -49,6 +49,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "ress": "^2.0.4"
+    "glob": "^7.1.6",
+    "ress": "^2.0.4",
+    "webpack-fix-style-only-entries": "^0.6.0"
   }
 }

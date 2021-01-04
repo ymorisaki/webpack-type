@@ -2,12 +2,15 @@ const path = require('path');
 const outputPath = path.resolve(__dirname, 'docs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 module.exports = [
     {
         mode: 'production',
         entry: {
-            index: './_dev/ts/index.ts'
+            index: './_dev/ts/index.ts',
+            init: './_dev/ts/init.ts',
+            hoge: './_dev/ts/index.ts'
         },
         devServer: {
             contentBase: outputPath,
@@ -35,10 +38,10 @@ module.exports = [
     {
         mode: 'production',
         entry: {
-            style: './_dev/scss/style.scss'
+            style: './_dev/scss/style.scss',
+            hoge: './_dev/scss/style.scss',
         },
         output: {
-            filename: 'dist.txt',
             path: `${__dirname}/docs/shared/css`
         },
         module: {
@@ -65,7 +68,8 @@ module.exports = [
             ]
         },
         plugins: [
-            new MiniCssExtractPlugin({filename: '[name].css'})
+            new MiniCssExtractPlugin({filename: '[name].css'}),
+            new FixStyleOnlyEntriesPlugin()
         ],
         optimization: {
             minimizer: [new OptimizeCSSAssetsPlugin({})]
